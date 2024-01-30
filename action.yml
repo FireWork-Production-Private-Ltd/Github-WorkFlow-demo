@@ -1,0 +1,7 @@
+name: 'Label new Pull Requests'
+description: 'Add a label when PR is opened'
+author: 'up1512001'
+  
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
