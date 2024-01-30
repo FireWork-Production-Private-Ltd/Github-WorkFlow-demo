@@ -24,6 +24,13 @@ async function run(){
             labels: [label],
         });
 
+        await octokit.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: pullRequest.number,
+            body: 'Thanks for contributing to our organization we will review your PR soon...',
+        });
+
     } catch(error){
         setFailed((error as Error)?.message ?? 'Unknown error');
     }
