@@ -14,5 +14,3 @@ jobs:
         with:
           gh-token: ${{secrets.GITHUB_TOKEN}}
           label: 'needs-review'
-          owner: ${{ github.repository_owner }}
-          persist-credentials: false
