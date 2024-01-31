@@ -15,5 +15,5 @@ runs:
   main: 'dist/index.js'
 
 branding:
-  icon: "activity"
-  color: "green"
+  icon: 'activity'
+  color: 'green'
