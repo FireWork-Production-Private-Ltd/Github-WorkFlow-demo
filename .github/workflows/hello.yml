@@ -3,16 +3,17 @@ name: "Hello"
 on:
   pull_request:
     types: [opened, reopened]
+  
+  workflow_dispatch:
 
 jobs:
-  hello:
+  label:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - uses: black1512/Github-WorkFlow-Playing-2@main
-      with:
-        label: "needs-review"
-        gh-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: black1512/Github-WorkFlow-Playing-2@2.0.0
+        with:
+          label: "needs-review"
+          gh-token: ${{ secrets.GITHUB_TOKEN }}
       
             
