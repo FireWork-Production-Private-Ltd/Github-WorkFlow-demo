@@ -9,8 +9,10 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./
-        with:
-          gh-token: ${{secrets.GITHUB_TOKEN}}
-          label: 'needs-review'
+      - uses: actions/checkout@main
+      - uses: black1512/Github-WorkFlow-Playing-2@main
+      with:
+        label: "needs-review"
+        gh-token: ${{ secrets.GITHUB_TOKEN }}
+      
+            
